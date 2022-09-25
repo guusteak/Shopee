@@ -91,7 +91,7 @@ $breakpoints: (
     }
     .description{
         width: 60%;
-        padding: 5% 0 0 10%;
+        padding: 5% 10%;
         &__orange{
             color: $Orange;
         }
@@ -139,11 +139,90 @@ $breakpoints: (
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 80px;
+            width: 30%;
             border: 1px solid black;
             &--orange{
-                width: 150px;
+                width: 60%;
+                justify-content: center;
+                gap: 5%;
+                background-color: $Orange;
+                color: $White;
+            }
+        }
+        &__operator{
+            &--invert{
+                filter: brightness(300%);
             }
         }
     }
+}
+.magic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: lighten($Black, 70%);
+    z-index: 1;
+    opacity: 80%;
+}
+.backdrop{
+    z-index: 2;
+    opacity: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__container, &__set{
+        width: 400px;
+        opacity: 100%;
+    }
+    &__container{
+        position: relative;
+    }
+    &__image{
+        border-radius: 15px;
+        width: 100%;
+        opacity: 100%;
+    }
+    &__set{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__thumbnail{
+        border-radius: 15px;
+        width: 20%;
+        opacity: 100%;
+    }
+    &__next{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid black;
+        padding: 10px;
+        top: calc(50% - 10px);
+        left: 93%;
+        background-color: $White;
+        border-radius: 50%;
+    }
+    &__previous{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        border: 1px solid black;
+        padding: 10px;
+        left: -20px;
+        top: calc(50% - 10px);
+        background-color: $White;
+        border-radius: 50%;
+    }
+}
+.none, .vis{
+    display: none;
 }

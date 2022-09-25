@@ -86,7 +86,7 @@ The designs were created to the following widths:
 }
 .main .description {
   width: 60%;
-  padding: 5% 0 0 10%;
+  padding: 5% 10%;
 }
 .main .description__orange {
   color: hsl(26deg, 100%, 55%);
@@ -135,9 +135,89 @@ The designs were created to the following widths:
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80px;
+  width: 30%;
   border: 1px solid black;
 }
 .main .description__button--orange {
-  width: 150px;
+  width: 60%;
+  justify-content: center;
+  gap: 5%;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+}
+.main .description__operator--invert {
+  filter: brightness(300%);
+}
+
+.magic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #b3b3b3;
+  z-index: 1;
+  opacity: 80%;
+}
+
+.backdrop {
+  z-index: 2;
+  opacity: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.backdrop__container, .backdrop__set {
+  width: 400px;
+  opacity: 100%;
+}
+.backdrop__container {
+  position: relative;
+}
+.backdrop__image {
+  border-radius: 15px;
+  width: 100%;
+  opacity: 100%;
+}
+.backdrop__set {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.backdrop__thumbnail {
+  border-radius: 15px;
+  width: 20%;
+  opacity: 100%;
+}
+.backdrop__next {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: 1px solid black;
+  padding: 10px;
+  top: calc(50% - 10px);
+  left: 93%;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+.backdrop__previous {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: 1px solid black;
+  padding: 10px;
+  left: -20px;
+  top: calc(50% - 10px);
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+
+.none, .vis {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
