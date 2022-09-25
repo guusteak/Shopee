@@ -1,0 +1,32 @@
+/* Layout
+
+The designs were created to the following widths:
+
+ Mobile: 375px
+ Desktop: 1440px
+
+## Colors
+
+### Primary
+*/
+$Orange: hsl(26, 100%, 55%);
+$Pale_orange: hsl(25, 100%, 94%);
+
+//Neutral
+
+$Very_dark_blue: hsl(220, 13%, 13%);
+$Dark_grayish_blue: hsl(219, 9%, 45%);
+$Grayish_blue: hsl(220, 14%, 75%);
+$Light_grayish_blue: hsl(223, 64%, 98%);
+$White: hsl(0, 0%, 100%);
+$Black : hsl(0, 0%, 0%); //(with 75% opacity for lightbox background)
+
+
+$Font_size: 16px; //(paragraph)
+
+// Font
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$Family: "Kumbh Sans"; //(https://fonts.google.com/specimen/Kumbh+Sans)
+
