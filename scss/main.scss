@@ -55,40 +55,42 @@ $breakpoints: (
 }
 
 .main{
+    min-width: 500px;
     margin-bottom: 100px;
     display: flex;
     width:  70%;
-    height: 70%;
+    height: 50%;
     min-height: 600px;
     margin: 100px auto;
     .product{
         height: 100%;
-        width: 50%;
+        width: 40%;
         display: flex;
         flex-direction: column;
         &__image{
             border-radius: 15px;
-            width: 20%;
+            height: 100%;
             max-height: 300px;
-            &--big{
-                max-width: fit-content;
-                width: auto;
-                height: auto;
-                max-height: min-content;
+          &--big{
+                min-width: 500px;            
+                width: 100%;
+                height: 80%;
+                max-height:fit-content;
             }
         }
         &__grid{
-
+            min-width: 500px;
+            margin-top: 10px;
+            height: 20%;
             display: flex; //jokes on you!!
-            margin-top: 30px;
             justify-content: space-between;
             width: 100%;
-            border: 1px solid black;
-        }
+            align-items: center;
+            }
 
     }
     .description{
-        border: 1px solid crimson;
+        width: 60%;
         padding: 5% 0 0 10%;
         &__orange{
             color: $Orange;
@@ -102,10 +104,10 @@ $breakpoints: (
             color: $Dark_grayish_blue;
         }
         &__price{
+            margin-top: 20px;
             width: 150px;
             display: flex;
             flex-wrap: wrap;
-            border: 1px solid crimson;
             align-items: baseline;
         }
         &__pheader{
@@ -121,6 +123,27 @@ $breakpoints: (
             align-items: center;
             justify-content: center;
             padding: 10px;
+        }
+        &__former{
+            text-decoration: line-through;
+            color: $Dark_grayish_blue;
+        }
+        &__buttons{
+            margin-top: 50px;
+            display: flex;
+            gap: 20px;
+        }
+        &__button{
+            border-radius: 15px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80px;
+            border: 1px solid black;
+            &--orange{
+                width: 150px;
+            }
         }
     }
 }
