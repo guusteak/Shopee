@@ -14,31 +14,51 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="page">
+  <header class="top">
+    <img class="top__logo" src="images/logo.svg" alt="logo">
+    <p class="top__pick">Collections</p>
+    <p class="top__pick">Men</p>
+    <p class="top__pick">Women</p>
+    <p class="top__pick">About</p>
+    <p class="top__pick">Contact</p>
+    <div class="cartman">
+      <img src="images/icon-cart.svg" alt="cart" class="cartman__image">
+      <img src="images/image-avatar.png" alt="man" class="cartman__image-person">
+    </div>
+  </header>
+  <main class="main">
+    <div class="product">
+      <img src="images/image-product-1.jpg" alt="product preview" class="product__image">
+      <div class="product__grid">
+        <img src="images/image-product-1-thumbnail.jpg" alt="product thumbnail" class="product__image">
+        <img src="images/image-product-2-thumbnail.jpg" alt="product thumbnail" class="product__image">
+        <img src="images/image-product-3-thumbnail.jpg" alt="product thumbnail" class="product__image">
+        <img src="images/image-product-4-thumbnail.jpg" alt="product thumbnail" class="product__image">
+      </div>
+    </div>
+    <div class="description">
+      <h1 class="description__orange">Sneaker Company</h1>
+      <h2 class="description__header">Fall Limited Edition Sneakers</h2>
+      <p class="description__main">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="description__price">
+        <h3 class="description__pheader">$125.00</h3>
+        <p class="description__discount">50%</p>
+        <p class="description__former">$250.00</p>
+      </div>
+      <div class="description__buttons">
+        <div class="description__button">
+          <img src="images/icon-minus.svg" alt="minus" class="description__operator">
+          <p class="description__inner-button">0</p>
+          <img class="description__operator" src="images/icon-plus.svg" alt="plus">
+        </div>
+        <div class="description__button description__button--orange">
+          <img src="images/icon-cart.svg" alt="cart" class="description_operator">
+          <p class="description_btext">Add to cart</p>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
