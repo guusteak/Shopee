@@ -33,6 +33,7 @@ for(let i=0; i<=4; i++){
                 break;
             default:
                 console.log("condition 0");
+                gray(i+1);
                 break;
             }
 
