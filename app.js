@@ -108,9 +108,56 @@ let operator = (e) =>{
         }
     }
     else if(e.target.alt == "plus"){
+        if(wartosc >= 10){
+            let tag = document.createElement("p");
+            let text = document.createTextNode("Amount of products cannot be bigger than 10");
+            tag.appendChild(text);
+            let element = document.querySelector(".description__buttons");
+            element.appendChild(tag);
+            tag.classList.add("popup");
+            
+        }
+        else{
         wartosc++;
         document.querySelector(".description__inner-button").innerHTML = wartosc;
+        }
+    
     }
 }
 odejmowanie.addEventListener("click", operator);
 dodawanie.addEventListener("click", operator);
+
+//Obsługa koszyka
+let cart = document.querySelector(".cartman");
+function cartActualisation(param){
+    
+    let cartAmount = document.createElement("p");
+    let cartAmountText = document.createTextNode(param);
+    cartAmount.appendChild(cartAmountText);
+    cart.appendChild(cartAmount);
+    cartAmount.classList.add("popup-cartman");
+}
+
+//we will give display none to this cartpopup until we click add to cart
+//but it works only for the first time, so we will need a new value
+//which will be called newValue, which will be equal to
+//value only at the first click on add to cart
+// ^^ lol this shit is useless
+//watch this  
+
+let addToCart = document.querySelector(".description__button--orange");
+addToCart.addEventListener("click", ()=>{
+    cartActualisation(wartosc);
+})
+let cartFlag = 0;
+cart.addEventListener("click", ()=>{
+    if(cartFlag === 0){
+        document.querySelector(".cartman__popup").classList.remove("none");
+        cartFlag = 1;
+        document.querySelector(".cartman__amount").innerHTML = wartosc + "x315 malp" +"<br> click on cart to close"
+    }
+    else if(cartFlag === 1){
+        document.querySelector(".cartman__popup").classList.add("none");
+        cartFlag = 0;
+    }
+})
