@@ -144,7 +144,7 @@ The designs were created to the following widths:
 @media (max-width: 1100px) {
   .main .description {
     padding: 0;
-    margin-bottom: 10px;
+    margin: 10px auto;
   }
 }
 .main .description__orange {
@@ -216,7 +216,7 @@ The designs were created to the following widths:
 
 .magic {
   transition: all 200ms;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -230,9 +230,9 @@ The designs were created to the following widths:
   transition: all 200ms;
   z-index: 2;
   opacity: 100%;
-  position: absolute;
+  position: fixed;
   top: 30%;
-  left: 30%;
+  left: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,6 +241,11 @@ The designs were created to the following widths:
 .backdrop__container, .backdrop__set {
   width: 400px;
   opacity: 100%;
+}
+@media (max-width: 700px) {
+  .backdrop {
+    left: 20%;
+  }
 }
 .backdrop__container {
   position: relative;

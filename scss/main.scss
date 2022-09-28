@@ -2,6 +2,7 @@
 
 $breakpoints: (
     mobile: 'max-width: 1100px',
+    tele: 'max-width: 700px',
 );
 @mixin viewport($breakpoint) {
     $size: map-get($breakpoints, $breakpoint);
@@ -137,7 +138,7 @@ $breakpoints: (
         padding: 5% 10%;
         @include viewport(mobile){
             padding: 0;
-            margin-bottom: 10px;
+            margin: 10px auto;
         }
         &__orange{
             color: $Orange;
@@ -211,7 +212,7 @@ $breakpoints: (
 }
 .magic{
     transition: all 200ms;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -224,9 +225,9 @@ $breakpoints: (
     transition: all 200ms;
     z-index: 2;
     opacity: 100%;
-    position: absolute;
+    position: fixed;
     top: 30%;
-    left: 30%;
+    left: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,7 +236,11 @@ $breakpoints: (
         width: 400px;
         opacity: 100%;
     }
+    @include viewport(tele){
+        left:20%;
+    }
     &__container{
+
         position: relative;
     }
     &__image{
